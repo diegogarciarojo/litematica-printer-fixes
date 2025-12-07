@@ -7,10 +7,11 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import java.util.stream.Stream;
 
-public class PropertySpecificGuesserGuide extends GuesserGuide {
+public class PropertySpecificGuesserGuide extends GeneralPlacementGuide {
     protected static Property<?>[] ignoredProperties = new Property[]{
             RepeaterBlock.DELAY,
             ComparatorBlock.MODE,
+            ComposterBlock.LEVEL,
             RedstoneWireBlock.POWER,
             RedstoneWireBlock.WIRE_CONNECTION_EAST,
             RedstoneWireBlock.WIRE_CONNECTION_NORTH,
@@ -45,6 +46,8 @@ public class PropertySpecificGuesserGuide extends GuesserGuide {
             Properties.EAST_WALL_SHAPE,
             Properties.NORTH_WALL_SHAPE,
             Properties.SOUTH_WALL_SHAPE,
+            Properties.ENABLED,
+            Properties.TRIGGERED
     };
 
     public static Property<?>[] rotationProperties = new Property[]{
